@@ -16,7 +16,7 @@ const meta = {
 };
 export const metadata: Metadata = {
   ...meta,
-  metadataBase: new URL(process.env.VERCEL_URL || ''),
+  // metadataBase: new URL(process.env.VERCEL_URL || ''),
   title: {
     default: 'AI RSC Demo',
     template: `%s - AI RSC Demo`,
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
-  twitter: {
-    ...meta,
-    card: 'summary_large_image',
-    site: '@vercel',
-  },
-  openGraph: {
-    ...meta,
-    locale: 'en-US',
-    type: 'website',
-  },
+  // twitter: {
+  //   ...meta,
+  //   card: 'summary_large_image',
+  //   // site: '@vercel',
+  // },
+  // openGraph: {
+  //   ...meta,
+  //   locale: 'en-US',
+  //   type: 'website',
+  // },
 };
 
 export const viewport = {
@@ -66,7 +66,7 @@ export default function RootLayout({
             <div className="flex flex-col min-h-screen">
               <Header />
               <main className="flex flex-col flex-1 bg-muted/50 dark:bg-background">
-                {children}
+               {children}
               </main>
             </div>
           </Providers>

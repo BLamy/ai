@@ -2,13 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import { useUIState, useActions, useAIState } from 'ai/rsc';
+import { useUIState, useActions, useAIState } from '../../../packages/core/rsc/rsc-shared';
 import { UserMessage } from '@/components/llm-stocks/message';
 
 import { type AI } from './action';
 import { ChatScrollAnchor } from '@/lib/hooks/chat-scroll-anchor';
 import { FooterText } from '@/components/footer';
-import Textarea from 'react-textarea-autosize';
+// import Textarea from 'react-textarea-autosize';
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit';
 import {
   Tooltip,
@@ -142,7 +142,7 @@ export default function Page() {
                   </TooltipTrigger>
                   <TooltipContent>New Chat</TooltipContent>
                 </Tooltip>
-                <Textarea
+                <textarea
                   ref={inputRef}
                   tabIndex={0}
                   onKeyDown={onKeyDown}

@@ -1,9 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import Textarea from 'react-textarea-autosize';
+// import Textarea from 'react-textarea-autosize';
 
-import { useActions, useUIState } from 'ai/rsc';
+import { useActions, useUIState } from '../../../packages/core/rsc/rsc-shared';
 import { UserMessage } from '@/components/llm-stocks/message';
 import { type AI } from '@/app/action';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -79,7 +79,7 @@ export function PromptForm() {
           </TooltipTrigger>
           <TooltipContent>New Chat</TooltipContent>
         </Tooltip>
-        <Textarea
+        <textarea
           ref={inputRef}
           tabIndex={0}
           onKeyDown={onKeyDown}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useActions, useUIState } from 'ai/rsc';
+import { useActions, useUIState } from '../../../../packages/core/rsc/rsc-shared';
 
 import type { AI } from '../../app/action';
 
